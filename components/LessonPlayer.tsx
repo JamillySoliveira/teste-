@@ -218,7 +218,7 @@ export function LessonPlayer({
   const currentNumber = String(currentLesson.order || currentIndex + 1).padStart(2, "0");
 
   return (
-    <div id="vl-lesson-player-page" className="max-w-4xl mx-auto space-y-5">
+    <div id="vl-lesson-player-page" className="max-w-4xl w-full mx-auto space-y-5 px-3 sm:px-4 md:px-0">
       {/* Botão de Voltar para a Grade do Curso e Gestão de Aula (Admin) */}
       <div className="flex items-center justify-between">
         <button
@@ -260,7 +260,8 @@ export function LessonPlayer({
       {/* ================= REPRODUTOR DE VÍDEO (GOOGLE DRIVE) ================= */}
       <div
         id="vl-video-container"
-        className="relative w-full aspect-video bg-slate-950 rounded-2xl overflow-hidden shadow-lg border border-slate-800"
+        className="w-full mx-auto aspect-video bg-slate-950 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border border-slate-800 relative"
+        style={{ aspectRatio: "16 / 9" }}
       >
         {isDemo ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-slate-900/95 text-white space-y-3">
@@ -290,7 +291,7 @@ export function LessonPlayer({
             key={embedUrl}
             src={embedUrl}
             title={currentLesson.title}
-            className="w-full h-full border-0"
+            className="w-full h-full border-0 block"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
           />
