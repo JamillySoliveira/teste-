@@ -260,8 +260,7 @@ export function LessonPlayer({
       {/* ================= REPRODUTOR DE VÍDEO (GOOGLE DRIVE) ================= */}
       <div
         id="vl-video-container"
-        className="w-full mx-auto aspect-video bg-slate-950 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border border-slate-800 relative"
-        style={{ aspectRatio: "16 / 9" }}
+        className="w-full mx-auto aspect-video min-h-[260px] sm:min-h-0 bg-slate-950 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border border-slate-800 relative"
       >
         {isDemo ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-slate-900/95 text-white space-y-3">
